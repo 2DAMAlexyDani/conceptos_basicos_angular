@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
+import { AboutInfoComponent } from 'src/app/shared/components/about-info/about-info.component';
 
 @Component({
   selector: 'app-about',
@@ -7,7 +9,10 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AboutPage implements OnInit {
 
-  constructor() { }
+  constructor(
+    router:Router,
+    about:AboutInfoComponent
+  ) { }
 
   ngOnInit() {
   }
