@@ -1,16 +1,9 @@
-.Cards {
+.Cards{
     display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
+    flex-wrap: wrap;
+  }
   
-    app-aboutinfo {
-      width: 20%;
-      height: 100%;
-    }
-  
-    ion-card {
-      height: 100%;
-    }
+  .Cards app-aboutinfo {
+    display: inline-block;
   }
   
