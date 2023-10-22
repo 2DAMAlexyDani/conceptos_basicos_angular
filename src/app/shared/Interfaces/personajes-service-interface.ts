@@ -6,7 +6,7 @@ export interface PersonajesServiceInterface {
      * Añade un personaje a la lista del servicio de personajes 
      * @returns Observable del personaje añadido
      */
-    addPerson(id:number):Observable<Personaje>;
+    addPerson(person:Personaje):Observable<Personaje>;
     /**
      * Borra un personaje de la lista del servicio de personajes
      * @returns Observable del personaje borrado
