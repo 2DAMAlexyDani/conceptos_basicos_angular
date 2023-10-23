@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { PersonajesService } from 'src/app/core/services/personajes.service';
 
 @Component({
   selector: 'app-welcome',
@@ -7,9 +8,10 @@ import { Component, OnInit } from '@angular/core';
 })
 export class WelcomePage implements OnInit {
 
-  constructor() { }
+  constructor( public personajeService:PersonajesService) { }
 
-  ngOnInit() {
+  ngOnInit() :void{
+    this.personajeService.getAllPerson().subscribe();
   }
 
 }

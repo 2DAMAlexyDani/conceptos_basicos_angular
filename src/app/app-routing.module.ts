@@ -13,8 +13,9 @@ const routes: Routes = [
   },
   {
     path: 'welcome',
-    loadChildren: () => import('./pages/welcome/welcome.module').then( m => m.WelcomePageModule)
-  },  {
+    loadChildren: () => import('./pages/Characters/characters.module').then( m => m.WelcomePageModule)
+  },
+  {
     path: 'about',
     loadChildren: () => import('./pages/about/about.module').then( m => m.AboutPageModule)
   },
