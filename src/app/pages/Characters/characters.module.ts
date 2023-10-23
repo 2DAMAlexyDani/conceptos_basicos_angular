@@ -6,10 +6,10 @@ import { IonicModule } from '@ionic/angular';
 
 import { WelcomePageRoutingModule } from './characters-routing.module';
 
-import { WelcomePage } from './characters.page';
+import { characters } from './characters.page';
 
 @NgModule({
   imports: [CommonModule, FormsModule, IonicModule, WelcomePageRoutingModule],
-  declarations: [WelcomePage],
+  declarations: [characters],
 })
-export class WelcomePageModule {}
+export class CharacterPageModule {}

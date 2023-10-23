@@ -64,6 +64,19 @@ export class PersonajesService implements PersonajesServiceInterface{
       observer.complete();
     })
   }
+  getPerson(person:Personaje):Observable<Personaje>{
+    var personajes = [...this._personajes.value];
+    return new Observable(observer=>{
+      var personaje = personajes.find((p)=>p.id==person.id);
+      if(personaje)
+          observer.next(person);
+        else
+          observer.error("Ha ocurrido un error en la busqueda del personaje , no existe el usuario en la lista");
+        observer.complete();
+    })
+    
+    
+  }
   updatePerson(person: Personaje): Observable<Personaje> {
     return new Observable(observable=>{
       var personajes = [...this._personajes.value];

@@ -2,16 +2,17 @@ import { Component, OnInit } from '@angular/core';
 import { PersonajesService } from 'src/app/core/services/personajes.service';
 
 @Component({
-  selector: 'app-welcome',
-  templateUrl: './welcome.page.html',
-  styleUrls: ['./welcome.page.scss'],
+  selector: 'app-characters',
+  templateUrl: './characters.page.html',
+  styleUrls: ['./characters.page.scss'],
 })
-export class WelcomePage implements OnInit {
+export class characters implements OnInit {
 
   constructor( public personajeService:PersonajesService) { }
 
   ngOnInit() :void{
-    this.personajeService.getAllPerson().subscribe();
+    this.personajeService.getAllPerson().subscribe()
+
   }
 
 }
