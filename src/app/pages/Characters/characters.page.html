@@ -10,5 +10,7 @@
       <ion-title size="large">Characters</ion-title>
     </ion-toolbar>
   </ion-header>
-  
+  <app-personaje-info *ngFor = "let personaje of (personajeService.personajes$ | async)"
+    [person]="personaje"
+  ></app-personaje-info>
 </ion-content>

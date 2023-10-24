@@ -12,7 +12,7 @@ export class characters implements OnInit {
 
   ngOnInit() :void{
     this.personajeService.getAllPerson().subscribe()
-
   }
+  
 
 }

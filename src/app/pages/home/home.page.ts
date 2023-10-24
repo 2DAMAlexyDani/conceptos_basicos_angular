@@ -20,8 +20,8 @@ pers: any;
       
   }
 
-  public welcome(){
-    this.router.navigate(['/welcome'])
+  public Characters(){
+    this.router.navigate(['/characters'])
   }
   public about(){
     this.router.navigate(['/about'])
