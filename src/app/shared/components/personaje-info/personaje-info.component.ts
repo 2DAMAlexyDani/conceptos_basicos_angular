@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
+import { Personaje } from '../../Interfaces/personaje';
 
 @Component({
   selector: 'app-personaje-info',
@@ -6,9 +7,8 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./personaje-info.component.scss'],
 })
 export class PersonajeInfoComponent  implements OnInit {
-
+  @Input() person!: Personaje;
   constructor() { }
-
-  ngOnInit() {}
+  ngOnInit(): void {}
 
 }

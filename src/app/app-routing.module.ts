@@ -12,9 +12,10 @@ const routes: Routes = [
     pathMatch: 'full'
   },
   {
-    path: 'welcome',
-    loadChildren: () => import('./pages/welcome/welcome.module').then( m => m.WelcomePageModule)
-  },  {
+    path: 'characters',
+    loadChildren: () => import('./pages/Characters/characters.module').then( m => m.CharacterPageModule)
+  },
+  {
     path: 'about',
     loadChildren: () => import('./pages/about/about.module').then( m => m.AboutPageModule)
   },
