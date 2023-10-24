@@ -1,13 +1,13 @@
-import { ComponentFixture, TestBed } from '@angular/core/testing';
-import { WelcomePage } from './characters.page';
+import { ComponentFixture, TestBed, async } from '@angular/core/testing';
+import { characters } from './characters.page';
 
 
-describe('WelcomePage', () => {
-  let component: WelcomePage;
-  let fixture: ComponentFixture<WelcomePage>;
+describe('characters', () => {
+  let component: characters;
+  let fixture: ComponentFixture<characters>;
 
   beforeEach(async(() => {
-    fixture = TestBed.createComponent(WelcomePage);
+    fixture = TestBed.createComponent(characters);
     component = fixture.componentInstance;
     fixture.detectChanges();
   }));

@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { PersonajesService } from 'src/app/core/services/personajes.service';
 
 @Component({
@@ -8,11 +9,17 @@ import { PersonajesService } from 'src/app/core/services/personajes.service';
 })
 export class characters implements OnInit {
 
-  constructor( public personajeService:PersonajesService) { }
+  constructor( public personajeService:PersonajesService,private router:Router,) { }
 
   ngOnInit() :void{
     this.personajeService.getAllPerson().subscribe()
   }
   
+  public about(){
+    this.router.navigate(['/about'])
+  }
 
+  public home(){
+    this.router.navigate(['/home'])
+  }
 }
