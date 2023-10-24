@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-import { AboutInfoComponent } from 'src/app/shared/components/about-info/about-info.component';
+import { PersonajesService } from 'src/app/core/services/personajes.service';
 
 @Component({
   selector: 'app-about',
@@ -10,11 +10,21 @@ import { AboutInfoComponent } from 'src/app/shared/components/about-info/about-i
 export class AboutPage implements OnInit {
 
   constructor(
-    router:Router,
-    about:AboutInfoComponent
-  ) { }
+    private router:Router,
+    public persService:PersonajesService
+  ) {}
 
   ngOnInit() {
+    this.persService.getAllPerson().subscribe();
   }
+
+  public welcome(){
+    this.router.navigate(['/welcome'])
+  }
+
+  public home(){
+    this.router.navigate(['/home'])
+  }
+  
 
 }

@@ -10,12 +10,13 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
   declarations: [
     //Components
     PersonajeInfoComponent,
+
     ],
   imports: [
     CommonModule,
     IonicModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
   ],
   exports:[
     CommonModule, 

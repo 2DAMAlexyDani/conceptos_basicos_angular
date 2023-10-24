@@ -3,21 +3,19 @@ import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 
 import { IonicModule } from '@ionic/angular';
-
+import { SharedModule } from 'src/app/shared/shared.module';
 import { AboutPageRoutingModule } from './about-routing.module';
-
 import { AboutPage } from './about.page';
-
-import { AboutInfoComponent } from 'src/app/shared/components/about-info/about-info.component';
-
+import { PrimeraLetraMayusculaPipe } from 'src/app/shared/Pipes/primera-letra-mayuscula.pipe';
+import { AboutinfoComponent } from 'src/app/shared/components/aboutinfo/aboutinfo.component';
 @NgModule({
   imports: [
     CommonModule,
     FormsModule,
     IonicModule,
-    AboutPageRoutingModule,
-    AboutPageModule,
+    SharedModule,
+    AboutPageRoutingModule
   ],
-  declarations: [AboutPage, AboutInfoComponent]
+  declarations: [AboutPage,PrimeraLetraMayusculaPipe,AboutinfoComponent]
 })
 export class AboutPageModule {}
