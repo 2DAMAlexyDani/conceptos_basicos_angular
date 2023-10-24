@@ -3,19 +3,17 @@
     <ion-title>about</ion-title>
   </ion-toolbar>
 </ion-header>
-
 <ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">about</ion-title>
-    </ion-toolbar>
-  </ion-header>
-</ion-content>
-
-<ion-content class="Cards">
-  <app-aboutinfo></app-aboutinfo>
-</ion-content>
-
-<ion-content class="Cards">
-  <app-aboutinfo></app-aboutinfo>
+  <div class="mi-ion-content">
+    <ion-button (click)="welcome()">Ir a welcome</ion-button>
+    <ion-button (click)="home()">Ir a Home</ion-button>
+    <div class="about-container">
+      <div class="about-panel">
+        <app-aboutinfo
+        *ngFor="let pers of (persService.personajes$ | async)"
+        [person]="pers"
+        ></app-aboutinfo>
+      </div>
+    </div>
+  </div>
 </ion-content>

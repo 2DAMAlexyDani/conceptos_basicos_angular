@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { BehaviorSubject, Observable } from 'rxjs';
-import { Personaje } from 'src/app/shared/Interfaces/personaje';
-import { PersonajesServiceInterface } from 'src/app/shared/Interfaces/personajes-service-interface';
+import { Personaje } from 'src/app/core/Interfaces/personaje';
+import { PersonajesServiceInterface } from 'src/app/core/Interfaces/personajes-service-interface';
 
 @Injectable({
   providedIn: 'root'
@@ -14,17 +14,17 @@ export class PersonajesService implements PersonajesServiceInterface{
   getAllPerson(): Observable<Personaje[]> {
     return new Observable(observer =>{
       var characters:Personaje[] =[
-        {id:0,name:"Daniel",surname:"Jódar Barbero",esAutor:true},
-        {id:1,name:"Alejandro",surname:"Giráldez Guerrero",esAutor:true},
-        {id:2,name:"Esqueletos",calidad:1,elixir:1,hp:81,daño:81,esAutor:false},
-        {id:3,name:"Duendes",calidad:1,elixir:2,hp:202,daño:120,esAutor:false},
-        {id:4,name:"Bruja",calidad:3,elixir:5,hp:838,daño:134,esAutor:false},
-        {id:5,name:"Minero",calidad:4,elixir:3,hp:1210,daño:193,esAutor:false},
-        {id:6,name:"Princesa",calidad:4,elixir:3,hp:261,daño:169,esAutor:false},
-        {id:7,name:"Bola de Fuego",calidad:2,elixir:4,daño:689,esAutor:false},
-        {id:8,name:"Mago",calidad:2,elixir:5,hp:720,daño:281,esAutor:false},
-        {id:9,name:"Arqueras",calidad:1,elixir:3,hp:304,daño:107,esAutor:false},
-        {id:10,name:"P.E.K.K.A.",calidad:3,elixir:7,hp:3760,daño:816,esAutor:false}
+        {id:0,name:"Daniel",surname:"Jódar Barbero",esAutor:true, img:"https://c0.klipartz.com/pngpicture/72/64/gratis-png-persona-silueta-humana.png"},
+        {id:1,name:"Alejandro",surname:"Giráldez Guerrero",esAutor:true, img:"https://c0.klipartz.com/pngpicture/72/64/gratis-png-persona-silueta-humana.png"},
+        {id:2,name:"Esqueletos",calidad:1,elixir:1,hp:81,damage:81,esAutor:false},
+        {id:3,name:"Duendes",calidad:1,elixir:2,hp:202,damage:120,esAutor:false},
+        {id:4,name:"Bruja",calidad:3,elixir:5,hp:838,damage:134,esAutor:false},
+        {id:5,name:"Minero",calidad:4,elixir:3,hp:1210,damage:193,esAutor:false},
+        {id:6,name:"Princesa",calidad:4,elixir:3,hp:261,damage:169,esAutor:false},
+        {id:7,name:"Bola de Fuego",calidad:2,elixir:4,damage:689,esAutor:false},
+        {id:8,name:"Mago",calidad:2,elixir:5,hp:720,damage:281,esAutor:false},
+        {id:9,name:"Arqueras",calidad:1,elixir:3,hp:304,damage:107,esAutor:false},
+        {id:10,name:"P.E.K.K.A.",calidad:3,elixir:7,hp:3760,damage:816,esAutor:false}
       ]
       observer.next(characters);
       this._personajes.next(characters);

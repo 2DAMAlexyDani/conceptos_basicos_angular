@@ -1,9 +1,9 @@
-.Cards{
+.about-panel{
     display: flex;
     flex-wrap: wrap;
   }
   
-  .Cards app-aboutinfo {
-    display: inline-block;
+  .aboutpanel app-aboutinfo {
+    display: inline-flex;
   }
   

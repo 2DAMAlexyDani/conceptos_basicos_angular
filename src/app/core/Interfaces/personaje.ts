@@ -14,5 +14,7 @@ export interface Personaje{
   calidad?:number;
   elixir?:number;
   hp?:number;
-  daño?:number;
+  damage?:number;
+  //Insertamos la url de la imagen
+  img?:string;
 }
