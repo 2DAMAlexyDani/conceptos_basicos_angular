@@ -17,14 +17,4 @@ export class AboutPage implements OnInit {
   ngOnInit() {
     this.persService.getAllPerson().subscribe();
   }
-
-  public welcome(){
-    this.router.navigate(['/welcome'])
-  }
-
-  public home(){
-    this.router.navigate(['/home'])
-  }
-  
-
 }

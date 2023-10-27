@@ -1,3 +1,9 @@
 <ion-app>
-  <ion-router-outlet></ion-router-outlet>
+  <div class="navegacion">
+    <ion-button (click)="home()">Ir a Home</ion-button>
+    <ion-button (click)="characters()">Ir a Characters</ion-button>
+    <ion-button (click)="about()">Ir a About</ion-button>  
+  </div>
+  <ion-router-outlet>
+  </ion-router-outlet>
 </ion-app>

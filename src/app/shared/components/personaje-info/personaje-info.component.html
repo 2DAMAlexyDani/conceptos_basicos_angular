@@ -1,3 +1,5 @@
-<p>
-  personaje-info works!
-</p>
+<div class="carta-contenido">
+  <ion-card button (click)="onCardClick()">
+      <ion-img *ngIf="!person.esAutor" [src]="person.img!" alt="imagen personaje"></ion-img>
+  </ion-card>
+</div>

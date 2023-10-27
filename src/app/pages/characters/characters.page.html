@@ -1,0 +1,15 @@
+<ion-header [translucent]="true" class="header">
+  <ion-toolbar>
+    <ion-title>Characters</ion-title>
+  </ion-toolbar>
+</ion-header>
+<ion-content >
+  <div class="pers-panel">
+    <app-personaje-info
+      *ngFor="let personaje of (personajeService.personajes$ | async)"
+      [person]="personaje"
+      (onCardClicked)="onCardClicked(personaje)"
+    >
+    </app-personaje-info>
+  </div>
+</ion-content>
