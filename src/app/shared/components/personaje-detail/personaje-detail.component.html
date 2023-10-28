@@ -1,0 +1,22 @@
+<ion-header>
+  <ion-button color="primary" fill="clear" (click)="onCancel()">
+    <ion-icon slot="icon-only" name="arrow-back-outline"></ion-icon>
+  </ion-button>
+</ion-header>
+<ion-content class="ion-padding">
+<div>
+  <h3>Nombre</h3>{{pers?.name}}
+</div>
+<div>
+  <h3>Calidad</h3>{{pers?.calidad}}
+</div>
+<div>
+  <h3>Elixir</h3>{{pers?.elixir}}
+</div>
+<div>
+  <h3>Health</h3>{{pers?.hp}}
+</div>
+<div>
+  <h3>Damage</h3>{{pers?.damage}}
+</div>
+</ion-content>

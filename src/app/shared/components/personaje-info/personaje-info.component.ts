@@ -1,5 +1,6 @@
-import { Component, Input, OnInit } from '@angular/core';
-import { Personaje } from '../../Interfaces/personaje';
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
+import { Personaje } from '../../../core/Interfaces/personaje';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-personaje-info',
@@ -7,8 +8,17 @@ import { Personaje } from '../../Interfaces/personaje';
   styleUrls: ['./personaje-info.component.scss'],
 })
 export class PersonajeInfoComponent  implements OnInit {
-  @Input() person!: Personaje;
-  constructor() { }
-  ngOnInit(): void {}
 
+  @Input() person!:Personaje;
+  @Output() onCardClicked:EventEmitter<void> = new EventEmitter<void>();
+  
+  constructor(
+    private router:Router
+  ) { }
+
+  ngOnInit() {}
+
+  onCardClick(){
+    this.onCardClicked.emit();
+  }
 }

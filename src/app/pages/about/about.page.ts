@@ -18,13 +18,4 @@ export class AboutPage implements OnInit {
     this.persService.getAllPerson().subscribe();
   }
 
-  public characters(){
-    this.router.navigate(['/characters'])
-  }
-
-  public home(){
-    this.router.navigate(['/home'])
-  }
-  
-
 }
