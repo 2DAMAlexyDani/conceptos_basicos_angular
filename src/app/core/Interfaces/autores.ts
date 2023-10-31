@@ -9,4 +9,4 @@ export interface Autores{
     surname:string;
     //Insertamos la url de la imagen
     img?:string;
-  }
+}

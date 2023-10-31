@@ -72,8 +72,6 @@ export class PersonajesService implements PersonajesServiceInterface{
           observer.error("Ha ocurrido un error en la busqueda del personaje , no existe el usuario en la lista");
         observer.complete();
     })
-    
-    
   }
   updatePerson(person: Personaje): Observable<Personaje> {
     return new Observable(observable=>{
