@@ -13,7 +13,7 @@ const routes: Routes = [
   },
   {
     path: 'characters',
-    loadChildren: () => import('./pages/Characters/characters.module').then( m => m.CharacterPageModule)
+    loadChildren: () => import('./pages/characters/characters.module').then( m => m.CharacterPageModule)
   },
   {
     path: 'about',
