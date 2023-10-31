@@ -11,6 +11,7 @@ import { Personaje } from 'src/app/core/Interfaces/personaje';
 export class PersonajeDetailComponent implements OnInit {
 
   form:FormGroup;
+  @Input() mode:'New'|'Edit' = 'New';
   @Input() set pers(_pers:Personaje|null){
     if (_pers){
       this.form.controls['id'].setValue(_pers.id);
@@ -45,5 +46,9 @@ export class PersonajeDetailComponent implements OnInit {
 
   onSubmit(){
     this._modal.dismiss(this.form.value, 'ok');
+  }
+
+  onDelete(){
+    this._modal.dismiss(this.form.value, 'delete');
   }
 }

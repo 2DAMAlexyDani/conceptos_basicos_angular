@@ -1,5 +1,5 @@
 import { Component, Input, OnInit } from "@angular/core";
-import { Personaje } from "../../../core/Interfaces/personaje";
+import { Autores } from "../../../core/Interfaces/autores";
 
 @Component({
   selector: 'app-aboutinfo',
@@ -9,7 +9,7 @@ import { Personaje } from "../../../core/Interfaces/personaje";
 
 export class AboutinfoComponent  implements OnInit {
   
-  @Input() person!:Personaje;
+  @Input() person!:Autores;
 
   constructor() { }
 

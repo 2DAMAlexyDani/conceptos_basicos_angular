@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-import { PersonajesService } from 'src/app/core/services/personajes.service';
+import { AutoresService } from 'src/app/core/services/autores.service';
 
 @Component({
   selector: 'app-about',
@@ -11,11 +11,10 @@ export class AboutPage implements OnInit {
 
   constructor(
     private router:Router,
-    public persService:PersonajesService
+    public persService:AutoresService
   ) {}
 
   ngOnInit() {
     this.persService.getAllPerson().subscribe();
   }
-
 }

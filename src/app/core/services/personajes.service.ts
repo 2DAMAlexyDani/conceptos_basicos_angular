@@ -14,17 +14,15 @@ export class PersonajesService implements PersonajesServiceInterface{
   getAllPerson(): Observable<Personaje[]> {
     return new Observable(observer =>{
       var characters:Personaje[] =[
-        {id:0,name:"Daniel",surname:"Jódar Barbero",esAutor:true,img:"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTPTUAjdwL-NGBoQpbNQMVeHv63keytXAC8oQ&usqp=CAU"},
-        {id:1,name:"Alejandro",surname:"Giráldez Guerrero",esAutor:true,img:"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTPTUAjdwL-NGBoQpbNQMVeHv63keytXAC8oQ&usqp=CAU"},
-        {id:2,name:"Esqueletos",calidad:1,elixir:1,hp:81,damage:81,img:"https://apiwar.com/ups/uploads/26000010.png",esAutor:false},
-        {id:3,name:"Duendes",calidad:1,elixir:2,hp:202,damage:120,img:"https://wiki.clashofroyale.ru/client/img/cards/goblins.png",esAutor:false},
-        {id:4,name:"Bruja",calidad:3,elixir:5,hp:838,damage:134,img:"https://cdn.statsroyale.com/images/cards/full/witch.png",esAutor:false},
-        {id:5,name:"Minero",calidad:4,elixir:3,hp:1210,damage:193,img:"https://wiki.clashofroyale.ru/client/img/cards/miner.png",esAutor:false},
-        {id:6,name:"Princesa",calidad:4,elixir:3,hp:261,damage:169,img:"https://wiki.clashofroyale.ru/client/img/cards/princess.png",esAutor:false},
-        {id:7,name:"Bola de Fuego",calidad:2,elixir:4,hp:0,damage:689,img:"https://wiki.clashofroyale.ru/client/img/cards/fireball.png",esAutor:false},
-        {id:8,name:"Mago",calidad:2,elixir:5,hp:720,damage:281,img:"https://cdn.statsroyale.com/images/cards/full/wizard.png",esAutor:false},
-        {id:9,name:"Arqueras",calidad:1,elixir:3,hp:304,damage:107,img:"https://cdn.statsroyale.com/images/cards/full/archer.png",esAutor:false},
-        {id:10,name:"P.E.K.K.A.",calidad:3,elixir:7,hp:3760,damage:816,img:"https://cdn.statsroyale.com/images/cards/full/pekka.png",esAutor:false}
+        {id:0,name:"Esqueletos",calidad:1,elixir:1,hp:81,damage:81,img:"https://apiwar.com/ups/uploads/26000010.png"},
+        {id:1,name:"Duendes",calidad:1,elixir:2,hp:202,damage:120,img:"https://wiki.clashofroyale.ru/client/img/cards/goblins.png"},
+        {id:2,name:"Bruja",calidad:3,elixir:5,hp:838,damage:134,img:"https://cdn.statsroyale.com/images/cards/full/witch.png"},
+        {id:3,name:"Minero",calidad:4,elixir:3,hp:1210,damage:193,img:"https://wiki.clashofroyale.ru/client/img/cards/miner.png"},
+        {id:4,name:"Princesa",calidad:4,elixir:3,hp:261,damage:169,img:"https://wiki.clashofroyale.ru/client/img/cards/princess.png"},
+        {id:5,name:"Bola de Fuego",calidad:2,elixir:4,hp:0,damage:689,img:"https://wiki.clashofroyale.ru/client/img/cards/fireball.png"},
+        {id:6,name:"Mago",calidad:2,elixir:5,hp:720,damage:281,img:"https://cdn.statsroyale.com/images/cards/full/wizard.png"},
+        {id:7,name:"Arqueras",calidad:1,elixir:3,hp:304,damage:107,img:"https://cdn.statsroyale.com/images/cards/full/archer.png"},
+        {id:8,name:"P.E.K.K.A.",calidad:3,elixir:7,hp:3760,damage:816,img:"https://cdn.statsroyale.com/images/cards/full/pekka.png"}
       ]
       observer.next(characters);
       this._personajes.next(characters);

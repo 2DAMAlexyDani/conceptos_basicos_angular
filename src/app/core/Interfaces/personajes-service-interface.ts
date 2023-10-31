@@ -14,8 +14,8 @@ export interface PersonajesServiceInterface {
     delPerson(person:Personaje):Observable<Personaje>;
     
     /**
-     * Obtiene todos los personajes de la lista exceptuando los dos primeros(autor 1 y 2 de la pag about)
-     * @returns Observable de toda la lista de personajesService menos los 2 primeros
+     * Obtiene todos los personajes de la lista
+     * @returns Observable de toda la lista de personajesService
      */
     getAllPerson():Observable<Personaje[]>;
     /**
@@ -25,7 +25,7 @@ export interface PersonajesServiceInterface {
     updatePerson(person:Personaje):Observable<Personaje>;
 
     /**
-     * Borra todos los personajes menos los autores de about
+     * Borra todos los personajes
      */
     deleteAll():Observable<void>;
 }
