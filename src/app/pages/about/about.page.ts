@@ -18,6 +18,7 @@ export class AboutPage implements OnInit {
     this.persService.getAllPerson().subscribe();
   }
 
+<<<<<<< HEAD
   public characters(){
     this.router.navigate(['/characters'])
   }
@@ -27,4 +28,6 @@ export class AboutPage implements OnInit {
   }
   
 
+=======
+>>>>>>> a416da3cb5f938afe25b96e8d4d2a8b0450a4280
 }
