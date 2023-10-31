@@ -1,4 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { ModalController } from '@ionic/angular';
 import { Personaje } from 'src/app/core/Interfaces/personaje';
 
@@ -8,15 +9,41 @@ import { Personaje } from 'src/app/core/Interfaces/personaje';
   styleUrls: ['./personaje-detail.component.scss'],
 })
 export class PersonajeDetailComponent implements OnInit {
-  @Input() pers:Personaje | null=null;
 
+  form:FormGroup;
+  @Input() set pers(_pers:Personaje|null){
+    if (_pers){
+      this.form.controls['id'].setValue(_pers.id);
+      this.form.controls['name'].setValue(_pers.name);
+      this.form.controls['calidad'].setValue(_pers.calidad);
+      this.form.controls['elixir'].setValue(_pers.elixir);
+      this.form.controls['hp'].setValue(_pers.hp);
+      this.form.controls['damage'].setValue(_pers.damage);
+      this.form.controls['img'].setValue(_pers.img);
+    }
+  }
   constructor(
-    private _modal:ModalController
-  ){}
+    private _modal:ModalController,
+    private formBuilder:FormBuilder
+  ) {
+    this.form = this.formBuilder.group({
+      id:[null],
+      name:['', [Validators.required]],
+      calidad:[null, [Validators.required]],
+      elixir:[null, [Validators.required]],
+      hp:[null, [Validators.required]],
+      damage:[null, [Validators.required]],
+      img:[this.pers?.img]
+    })
+  }
 
   ngOnInit() {}
 
   onCancel(){
     this._modal.dismiss(null, 'cancel');
+  }
+
+  onSubmit(){
+    this._modal.dismiss(this.form.value, 'ok');
   }
 }
