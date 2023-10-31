@@ -1,2 +1,10 @@
+ion-header {
+    position: static;
+    display: flex;
+}
 
-  
+.pers-panel{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+}

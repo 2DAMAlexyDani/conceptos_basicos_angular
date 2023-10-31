@@ -1,17 +1,5 @@
-<<<<<<< HEAD
-<ion-card>
-  <ion-card-header class="nombre Personaje" *ngIf="!person.esAutor">
-      <ion-card-title>{{person?.name}}</ion-card-title>
-      <ion-img [src]="person.img!" alt="imagen personaje"></ion-img>
-      <ion-card-subtitle *ngIf="person.hp! > 0">HP: {{person?.hp}}</ion-card-subtitle>
-      <ion-card-subtitle *ngIf="person.hp! == 0"><br></ion-card-subtitle>
-      <ion-card-subtitle>Damage: {{person?.damage}}</ion-card-subtitle>
-  </ion-card-header>
-</ion-card>
-=======
 <div class="carta-contenido">
   <ion-card button (click)="onCardClick()">
       <ion-img *ngIf="!person.esAutor" [src]="person.img!" alt="imagen personaje"></ion-img>
   </ion-card>
 </div>
->>>>>>> a416da3cb5f938afe25b96e8d4d2a8b0450a4280

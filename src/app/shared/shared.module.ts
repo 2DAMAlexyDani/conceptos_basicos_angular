@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 import { PersonajeInfoComponent } from './components/personaje-info/personaje-info.component';
 import { IonicModule } from '@ionic/angular';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { PersonajeDetailComponent } from './components/personaje-detail/personaje-detail.component';
 
 
 
@@ -10,6 +11,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
   declarations: [
     //Components
     PersonajeInfoComponent,
+    PersonajeDetailComponent
 
     ],
   imports: [
@@ -24,6 +26,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     FormsModule,
     //Components
     PersonajeInfoComponent,
+    PersonajeDetailComponent
   ]
 })
 export class SharedModule { }

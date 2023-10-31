@@ -1,18 +1,15 @@
-<ion-header [translucent]="true">
+<ion-header [translucent]="true" class="header">
   <ion-toolbar>
     <ion-title>Characters</ion-title>
   </ion-toolbar>
-  <ion-button (click)="about()">About</ion-button>
-  <ion-button (click)="home()">Home</ion-button>
 </ion-header>
-
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Characters</ion-title>
-    </ion-toolbar>
-  </ion-header>
-  <app-personaje-info *ngFor = "let personaje of (personajeService.personajes$ | async)"
-    [person]="personaje"
-  ></app-personaje-info>
+<ion-content>
+  <div class="pers-panel">
+    <app-personaje-info
+      *ngFor="let personaje of (personajeService.personajes$ | async)"
+      [person]="personaje"
+      (onCardClicked)="onCardClicked(personaje)"
+    >
+    </app-personaje-info>
+  </div>
 </ion-content>
