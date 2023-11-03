@@ -6,11 +6,13 @@ import { PersonajesServiceInterface } from 'src/app/core/Interfaces/personajes-s
 @Injectable({
   providedIn: 'root'
 })
+
 export class PersonajesService implements PersonajesServiceInterface{
   private _personajes:BehaviorSubject<Personaje[]> = new BehaviorSubject<Personaje[]>([]);
   personajes$:Observable<Personaje[]> = this._personajes.asObservable();
 
   constructor() {}
+
   getAllPerson(): Observable<Personaje[]> {
     return new Observable(observer =>{
       var characters:Personaje[] =[
@@ -29,13 +31,21 @@ export class PersonajesService implements PersonajesServiceInterface{
       observer.complete();
     });
   }
-  deleteAll(): Observable<void> {
+
+  getPerson(person:Personaje):Observable<Personaje>{
+    var personajes = [...this._personajes.value];
     return new Observable(observer=>{
-      this._personajes.next([]);
-      observer.next();
-      observer.complete();
+      var personaje = personajes.find((p)=>p.id==person.id);
+      if(personaje){
+          observer.next(person);
+      }
+      else{
+        observer.error("El personaje no existe en la lista");
+      }
+    observer.complete();
     })
   }
+
   addPerson(person:Personaje): Observable<Personaje> {
     var personajes = [...this._personajes.value];
     return new Observable(observer=>{
@@ -45,10 +55,26 @@ export class PersonajesService implements PersonajesServiceInterface{
         observer.next(person);
         this._personajes.next(personajes);
       }
-      else observer.error('El usuario ya esta favorito');
-      observer.complete();
+      else {
+        observer.error('El personaje ya está creado');
+      }
+    observer.complete();
     })
   }
+
+  updatePerson(person: Personaje): Observable<Personaje> {
+    return new Observable(observer=>{
+      var personajes = [...this._personajes.value];
+      var index = personajes.findIndex(p => p.id == person.id);
+      if(index>=0){
+        personajes[index]=person;
+        observer.next(person);
+        this._personajes.next(personajes);
+      }
+    observer.complete();
+    })
+  }
+
   delPerson(person:Personaje): Observable<Personaje> {
     var _person = person;
     return new Observable<Personaje>(observer=>{
@@ -59,30 +85,7 @@ export class PersonajesService implements PersonajesServiceInterface{
         this._personajes.next(personajes);
         observer.next(person);
       }
-      observer.complete();
-    })
-  }
-  getPerson(person:Personaje):Observable<Personaje>{
-    var personajes = [...this._personajes.value];
-    return new Observable(observer=>{
-      var personaje = personajes.find((p)=>p.id==person.id);
-      if(personaje)
-          observer.next(person);
-        else
-          observer.error("Ha ocurrido un error en la busqueda del personaje , no existe el usuario en la lista");
-        observer.complete();
-    })
-  }
-  updatePerson(person: Personaje): Observable<Personaje> {
-    return new Observable(observable=>{
-      var personajes = [...this._personajes.value];
-      var index = personajes.findIndex(p => p.id == person.id);
-      if(index>=0){
-        personajes[index]=person;
-        observable.next(person);
-        this._personajes.next(personajes);
-      }
-      observable.complete();
+    observer.complete();
     })
   }
 }

@@ -3,6 +3,16 @@ import { Personaje } from "./personaje";
 
 export interface PersonajesServiceInterface {
     /**
+     * Obtiene todos los personajes de la lista
+     * @returns Observable de toda la lista de personajesService
+     */
+    getAllPerson():Observable<Personaje[]>;
+    /**
+     * Obtiene un personaje de la lista
+     * @returns Observable del personaje obtenido
+     */
+    getPerson(person:Personaje):Observable<Personaje>;
+    /**
      * Añade un personaje a la lista del servicio de personajes 
      * @returns Observable del personaje añadido
      */
@@ -12,20 +22,9 @@ export interface PersonajesServiceInterface {
      * @returns Observable del personaje borrado
      */
     delPerson(person:Personaje):Observable<Personaje>;
-    
-    /**
-     * Obtiene todos los personajes de la lista
-     * @returns Observable de toda la lista de personajesService
-     */
-    getAllPerson():Observable<Personaje[]>;
     /**
      * Actualiza los datos de un personaje
-     * @returns personaje cambiado
+     * @returns Observable del personaje actualizado
      */
     updatePerson(person:Personaje):Observable<Personaje>;
-
-    /**
-     * Borra todos los personajes
-     */
-    deleteAll():Observable<void>;
 }

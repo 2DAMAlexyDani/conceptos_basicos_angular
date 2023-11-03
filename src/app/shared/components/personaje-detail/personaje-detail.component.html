@@ -6,10 +6,10 @@
       </ion-button>
     </ion-buttons>
     <ion-title>
-      Editar personaje
+      {{(mode=='New'?'Personaje nuevo':'Editar personaje')}}
     </ion-title>
     <ion-buttons slot="end">
-      <ion-button color="primary" fill="clear" (click)="onDelete()">
+      <ion-button *ngIf="mode=='Edit'" color="primary" fill="clear" (click)="onDelete()">
         <ion-icon slot="icon-only" name="trash-outline"></ion-icon>
       </ion-button>
     </ion-buttons>
@@ -35,5 +35,5 @@
   </form>
 </ion-content>
 <ion-footer>
-  <ion-button type="submit" [disabled]="!form.valid || !form.dirty" class="ion-padding" expand="full" (click)="onSubmit()">{{('Guardar')}}</ion-button>
+  <ion-button type="submit" [disabled]="!form.valid || !form.dirty" class="ion-padding" expand="full" (click)="onSubmit()">{{(mode=='New'?'Crear personaje':'Guardar personaje')}}</ion-button>
 </ion-footer>

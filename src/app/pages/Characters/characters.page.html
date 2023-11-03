@@ -3,6 +3,9 @@
     <ion-title>Characters</ion-title>
   </ion-toolbar>
 </ion-header>
+<ion-button fill="clear" aria-label="New Character" (click)="onNewCharacter()" class="newcha">
+  <ion-icon slot="icon-only"  color="primary"  name="add-outline" aria-hidden="true"></ion-icon>
+</ion-button>
 <ion-content>
   <div class="pers-panel">
     <app-personaje-info

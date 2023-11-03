@@ -6,11 +6,10 @@ export interface Personaje{
   id:number;
   name:string;
   //Atributo cartas
-  //1:Comun,2:Especial,3:Épica,4:Legendaria
-  calidad?:number;
-  elixir?:number;
-  hp?:number;
-  damage?:number;
+  calidad:number; //1:Comun,2:Especial,3:Épica,4:Legendaria
+  elixir:number;
+  hp:number;
+  damage:number;
   //Insertamos la url de la imagen
   img?:string;
 }

@@ -45,7 +45,7 @@ export class PersonajeDetailComponent implements OnInit {
   }
 
   onSubmit(){
-    this._modal.dismiss(this.form.value, 'ok');
+    this._modal.dismiss(this.form.value, 'newdata');
   }
 
   onDelete(){
