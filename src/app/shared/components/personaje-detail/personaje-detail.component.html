@@ -17,6 +17,7 @@
 </ion-header>
 <ion-content class="ion-padding">
   <form [formGroup]="form" (ngSubmit)="onSubmit()">
+      <input  formControlName="img" type="text" #imageLoader accept="image/png, image/gif, image/jpeg">
     <ion-item>
       <ion-input label="Nombre" labelPlacement="start" formControlName="name" type="text"></ion-input>
     </ion-item>

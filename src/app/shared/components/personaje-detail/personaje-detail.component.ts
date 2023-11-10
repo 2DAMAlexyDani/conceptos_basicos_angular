@@ -20,7 +20,7 @@ export class PersonajeDetailComponent implements OnInit {
       this.form.controls['elixir'].setValue(_pers.elixir);
       this.form.controls['hp'].setValue(_pers.hp);
       this.form.controls['damage'].setValue(_pers.damage);
-      this.form.controls['img'].setValue(_pers.img);
+      this.form.controls['img'as string].setValue(_pers.img);
     }
   }
   constructor(
@@ -29,16 +29,18 @@ export class PersonajeDetailComponent implements OnInit {
   ) {
     this.form = this.formBuilder.group({
       id:[null],
+      img:[''],
       name:['', [Validators.required]],
       calidad:[null, [Validators.required]],
       elixir:[null, [Validators.required]],
       hp:[null, [Validators.required]],
-      damage:[null, [Validators.required]],
-      img:[this.pers?.img]
+      damage:[null, [Validators.required]]
     })
   }
 
-  ngOnInit() {}
+  ngOnInit() {
+    
+  }
 
   onCancel(){
     this._modal.dismiss(null, 'cancel');
