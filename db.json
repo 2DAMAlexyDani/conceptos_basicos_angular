@@ -1,32 +1,146 @@
 {
-    "personajes":[
-        {"id":0,"name":"Esqueletos","calidad":1,"elixir":1,"hp":81,"damage":81,"img":"https://apiwar.com/ups/uploads/26000010.png"},
-        {"id":1,"name":"Duendes","calidad":1,"elixir":2,"hp":202,"damage":120,"img":"https://wiki.clashofroyale.ru/client/img/cards/goblins.png"},
-        {"id":2,"name":"Bruja","calidad":3,"elixir":5,"hp":838,"damage":134,"img":"https://cdn.statsroyale.com/images/cards/full/witch.png"},
-        {"id":3,"name":"Minero","calidad":4,"elixir":3,"hp":1210,"damage":193,"img":"https://wiki.clashofroyale.ru/client/img/cards/miner.png"},
-        {"id":4,"name":"Princesa","calidad":4,"elixir":3,"hp":261,"damage":169,"img":"https://wiki.clashofroyale.ru/client/img/cards/princess.png"},
-        {"id":5,"name":"Bola de Fuego","calidad":2,"elixir":4,"hp":0,"damage":689,"img":"https://wiki.clashofroyale.ru/client/img/cards/fireball.png"},
-        {"id":6,"name":"Mago","calidad":2,"elixir":5,"hp":720,"damage":281,"img":"https://cdn.statsroyale.com/images/cards/full/wizard.png"},
-        {"id":7,"name":"Arqueras","calidad":1,"elixir":3,"hp":304,"damage":107,"img":"https://cdn.statsroyale.com/images/cards/full/archer.png"},
-        {"id":8,"name":"P.E.K.K.A.","calidad":3,"elixir":7,"hp":3760,"damage":816,"img":"https://cdn.statsroyale.com/images/cards/full/pekka.png"}
-
-    ],
-    "arenas":[
-        {"id":1,"name":"Estadio Duende"},
-        {"id":2,"name":"Foso de Huesos"},
-        {"id":3,"name":"Valle de Hechizos"},
-        {"id":4,"name":"Fuerte del P.E.K.K.A"},
-        {"id":5,"name":"Arena Real"}
-    ],
-    "unlockIn":[
-        {"personaje_id":1,"arena_id":1},
-        {"personaje_id":3,"arena_id":1},
-        {"personaje_id":2,"arena_id":3},
-        {"personaje_id":4,"arena_id":2},
-        {"personaje_id":6,"arena_id":4},
-        {"personaje_id":5,"arena_id":3},
-        {"personaje_id":7,"arena_id":5},
-        {"personaje_id":8,"arena_id":5},
-        {"personaje_id":0,"arena_id":2}
-    ]
-  }
+  "personajes": [
+    {
+      "id": 0,
+      "name": "Esqueletos",
+      "calidad": 1,
+      "elixir": 1,
+      "hp": 81,
+      "damage": 81,
+      "img": "https://apiwar.com/ups/uploads/26000010.png"
+    },
+    {
+      "id": 1,
+      "name": "Duendes",
+      "calidad": 1,
+      "elixir": 2,
+      "hp": 202,
+      "damage": 120,
+      "img": "https://wiki.clashofroyale.ru/client/img/cards/goblins.png"
+    },
+    {
+      "id": 2,
+      "name": "Bruja",
+      "calidad": 3,
+      "elixir": 5,
+      "hp": 838,
+      "damage": 134,
+      "img": "https://cdn.statsroyale.com/images/cards/full/witch.png"
+    },
+    {
+      "id": 3,
+      "name": "Minero",
+      "calidad": 4,
+      "elixir": 3,
+      "hp": 1210,
+      "damage": 193,
+      "img": "https://wiki.clashofroyale.ru/client/img/cards/miner.png"
+    },
+    {
+      "id": 4,
+      "name": "Princesa",
+      "calidad": 4,
+      "elixir": 3,
+      "hp": 261,
+      "damage": 169,
+      "img": "https://wiki.clashofroyale.ru/client/img/cards/princess.png"
+    },
+    {
+      "id": 5,
+      "name": "Bola de Fuego",
+      "calidad": 2,
+      "elixir": 4,
+      "hp": 0,
+      "damage": 689,
+      "img": "https://wiki.clashofroyale.ru/client/img/cards/fireball.png"
+    },
+    {
+      "id": 6,
+      "name": "Mago",
+      "calidad": 2,
+      "elixir": 5,
+      "hp": 720,
+      "damage": 281,
+      "img": "https://cdn.statsroyale.com/images/cards/full/wizard.png"
+    },
+    {
+      "id": 7,
+      "name": "Arqueras",
+      "calidad": 1,
+      "elixir": 3,
+      "hp": 304,
+      "damage": 107,
+      "img": "https://cdn.statsroyale.com/images/cards/full/archer.png"
+    },
+    {
+      "id": 8,
+      "name": "P.E.K.K.A.",
+      "calidad": 3,
+      "elixir": 7,
+      "hp": 3760,
+      "damage": 816,
+      "img": "https://cdn.statsroyale.com/images/cards/full/pekka.png"
+    }
+   
+  ],
+  "arenas": [
+    {
+      "id": 1,
+      "name": "Estadio Duende"
+    },
+    {
+      "id": 2,
+      "name": "Foso de Huesos"
+    },
+    {
+      "id": 3,
+      "name": "Valle de Hechizos"
+    },
+    {
+      "id": 4,
+      "name": "Fuerte del P.E.K.K.A"
+    },
+    {
+      "id": 5,
+      "name": "Arena Real"
+    }
+  ],
+  "unlockIn": [
+    {
+      "personaje_id": 1,
+      "arena_id": 1
+    },
+    {
+      "personaje_id": 3,
+      "arena_id": 1
+    },
+    {
+      "personaje_id": 2,
+      "arena_id": 3
+    },
+    {
+      "personaje_id": 4,
+      "arena_id": 2
+    },
+    {
+      "personaje_id": 6,
+      "arena_id": 4
+    },
+    {
+      "personaje_id": 5,
+      "arena_id": 3
+    },
+    {
+      "personaje_id": 7,
+      "arena_id": 5
+    },
+    {
+      "personaje_id": 8,
+      "arena_id": 5
+    },
+    {
+      "personaje_id": 0,
+      "arena_id": 2
+    }
+  ]
+}
