@@ -7,7 +7,7 @@
       "elixir": 1,
       "hp": 81,
       "damage": 81,
-      "img": "https://apiwar.com/ups/uploads/26000010.png"
+      "img": "https://cdns3.royaleapi.com/cdn-cgi/image/w=150,h=180,format=auto/static/img/cards/v1-843264bf/skeletons.png"
     },
     {
       "id": 1,
@@ -16,7 +16,7 @@
       "elixir": 2,
       "hp": 202,
       "damage": 120,
-      "img": "https://wiki.clashofroyale.ru/client/img/cards/goblins.png"
+      "img": "https://cdns3.royaleapi.com/cdn-cgi/image/w=150,h=180,format=auto/static/img/cards/v1-843264bf/goblins.png"
     },
     {
       "id": 2,
@@ -25,7 +25,7 @@
       "elixir": 5,
       "hp": 838,
       "damage": 134,
-      "img": "https://cdn.statsroyale.com/images/cards/full/witch.png"
+      "img": "https://cdns3.royaleapi.com/cdn-cgi/image/w=150,h=180,format=auto/static/img/cards/v1-843264bf/witch.png"
     },
     {
       "id": 3,
@@ -34,7 +34,7 @@
       "elixir": 3,
       "hp": 1210,
       "damage": 193,
-      "img": "https://wiki.clashofroyale.ru/client/img/cards/miner.png"
+      "img": "https://cdns3.royaleapi.com/cdn-cgi/image/w=150,h=180,format=auto/static/img/cards/v1-843264bf/miner.png"
     },
     {
       "id": 4,
@@ -43,7 +43,7 @@
       "elixir": 3,
       "hp": 261,
       "damage": 169,
-      "img": "https://wiki.clashofroyale.ru/client/img/cards/princess.png"
+      "img": "https://cdns3.royaleapi.com/cdn-cgi/image/w=150,h=180,format=auto/static/img/cards/v1-843264bf/princess.png"
     },
     {
       "id": 5,
@@ -52,7 +52,7 @@
       "elixir": 4,
       "hp": 0,
       "damage": 689,
-      "img": "https://wiki.clashofroyale.ru/client/img/cards/fireball.png"
+      "img": "https://cdns3.royaleapi.com/cdn-cgi/image/w=150,h=180,format=auto/static/img/cards/v1-843264bf/fireball.png"
     },
     {
       "id": 6,
@@ -61,7 +61,7 @@
       "elixir": 5,
       "hp": 720,
       "damage": 281,
-      "img": "https://cdn.statsroyale.com/images/cards/full/wizard.png"
+      "img": "https://cdns3.royaleapi.com/cdn-cgi/image/w=150,h=180,format=auto/static/img/cards/v1-843264bf/wizard.png"
     },
     {
       "id": 7,
@@ -70,7 +70,7 @@
       "elixir": 3,
       "hp": 304,
       "damage": 107,
-      "img": "https://cdn.statsroyale.com/images/cards/full/archer.png"
+      "img": "https://cdns3.royaleapi.com/cdn-cgi/image/w=150,h=180,format=auto/static/img/cards/v1-843264bf/archers.png"
     },
     {
       "id": 8,
@@ -79,9 +79,8 @@
       "elixir": 7,
       "hp": 3760,
       "damage": 816,
-      "img": "https://cdn.statsroyale.com/images/cards/full/pekka.png"
+      "img": "https://cdns3.royaleapi.com/cdn-cgi/image/w=150,h=180,format=auto/static/img/cards/v1-843264bf/pekka.png"
     }
-   
   ],
   "arenas": [
     {

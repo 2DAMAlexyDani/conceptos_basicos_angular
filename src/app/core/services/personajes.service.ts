@@ -15,14 +15,18 @@ export class PersonajesService implements PersonajesServiceInterface {
   >([]);
   personajes$: Observable<Personaje[]> = this._personajes.asObservable();
 
-  constructor(public http: HttpClient) {}
+  constructor(
+    private http:HttpClient
+    ) {}
 
   getAllPerson(): Observable<Personaje[]> {
-    return this.http.get<Personaje[]>(environment.URL_BASE + 'personajes').pipe(
-      tap((personajes: Personaje[]) => {
-        this._personajes.next(personajes);
-      })
-    );
+    return this.http.get<Personaje[]>(environment.URL_BASE+'personajes').pipe(tap((personajes:Personaje[])=>{
+      this._personajes.next(personajes);
+    }))
+  }
+
+  getPerson(id:number):Observable<Personaje>{
+    return this.http.get<Personaje>(environment.URL_BASE+`personajes/${id}`);
   }
 
   addPerson(person: Personaje): Observable<Personaje> {
@@ -33,6 +37,18 @@ export class PersonajesService implements PersonajesServiceInterface {
           this.getAllPerson().subscribe();
         })
       );
+  }
+
+  updatePerson(person: Personaje): Observable<Personaje> {
+    return new Observable<Personaje>(observer=>{
+      this.http.patch<Personaje>(environment.URL_BASE+`personajes/${person.id}`, person).subscribe(_=>{
+        this.getAllPerson().subscribe(_=>{
+          this.getPerson(person.id).subscribe(_person=>{
+            observer.next(_person);
+          })
+        })
+      })
+    })
   }
 
   delPerson(person: Personaje): Observable<Personaje> {
