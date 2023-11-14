@@ -1,7 +1,9 @@
 <ion-app>
   <div class="navegacion">
     <ion-button (click)="home()">Ir a Home</ion-button>
-    <ion-button (click)="characters()">Ir a Characters</ion-button>
+    <ion-button class="botonCartas" fill="clear" (click)="characters()">
+      <img src="./../assets/img/card-img.png">
+    </ion-button>
     <ion-button (click)="about()">Ir a About</ion-button>
   </div>
   <ion-router-outlet></ion-router-outlet>
