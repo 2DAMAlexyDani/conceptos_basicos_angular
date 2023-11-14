@@ -11,7 +11,7 @@ export interface PersonajesServiceInterface {
      * Obtiene un personaje de la lista
      * @returns Observable del personaje obtenido
      */
-    getPerson(person:Personaje):Observable<Personaje>;
+    getPerson(id:number):Observable<Personaje>;
     /**
      * Añade un personaje a la lista del servicio de personajes 
      * @returns Observable del personaje añadido
