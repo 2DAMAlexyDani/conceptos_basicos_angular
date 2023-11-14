@@ -1,8 +1,12 @@
+ion-title{
+  font-family: 'ClashRoyaleFont', sans-serif;
+}
+
 .about-panel{
   display: flex;
   flex-wrap: wrap;
 }
-  
+
 .about-panel app-aboutinfo {
   display: inline-flex;
 }
