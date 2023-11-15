@@ -20,6 +20,7 @@ export class PersonajeDetailComponent implements OnInit {
       this.form.controls['elixir'].setValue(_pers.elixir);
       this.form.controls['hp'].setValue(_pers.hp);
       this.form.controls['damage'].setValue(_pers.damage);
+      this.form.controls['arena'].setValue(_pers.arena);
       this.form.controls['img'as string].setValue(_pers.img);
     }
   }
@@ -34,7 +35,8 @@ export class PersonajeDetailComponent implements OnInit {
       calidad:[null, [Validators.required]],
       elixir:[null, [Validators.required]],
       hp:[null, [Validators.required]],
-      damage:[null, [Validators.required]]
+      damage:[null, [Validators.required]],
+      arena:[null, [Validators.required]],
     })
   }
 

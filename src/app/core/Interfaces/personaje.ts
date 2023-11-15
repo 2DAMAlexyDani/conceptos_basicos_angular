@@ -10,6 +10,7 @@ export interface Personaje{
   elixir:number;
   hp:number;
   damage:number;
+  arena:number;
   //Insertamos la url de la imagen
   img?:string;
 }

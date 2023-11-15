@@ -1,0 +1,20 @@
+<ion-header [translucent]="true" class="header">
+  <ion-toolbar>
+    <ion-title>Arenas</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-button fill="clear" aria-label="New Arena" (click)="onNewArena()" class="newarena">
+  <ion-icon slot="icon-only"  color="primary"  name="add-outline" aria-hidden="true"></ion-icon>
+</ion-button>
+<ion-content class="fondo">
+  <div class="arenas-panel">
+    <app-arena-info
+      *ngFor="let arena of (arenasService.arenas$ | async)"
+      [arena]="arena"
+      (onCardClicked)="onCardClicked(arena)"
+    >
+    </app-arena-info>
+  </div>
+</ion-content>
+

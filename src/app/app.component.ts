@@ -19,6 +19,10 @@ export class AppComponent {
     this.router.navigate(['/characters'])
   }
 
+  public arenas(){
+    this.router.navigate(['/arenas'])
+  }
+
   public about(){
     this.router.navigate(['/about'])
   }
