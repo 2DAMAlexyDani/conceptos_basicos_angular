@@ -8,7 +8,7 @@
       "hp": 81,
       "damage": 81,
       "img": "https://cdns3.royaleapi.com/cdn-cgi/image/w=150,h=180,format=auto/static/img/cards/v1-843264bf/skeletons.png",
-      "arena": 2
+      "arena": 3
     },
     {
       "id": 1,
@@ -18,7 +18,7 @@
       "hp": 202,
       "damage": 120,
       "img": "https://cdns3.royaleapi.com/cdn-cgi/image/w=150,h=180,format=auto/static/img/cards/v1-843264bf/goblins.png",
-      "arena": 1
+      "arena": 2
     },
     {
       "id": 2,
@@ -28,7 +28,7 @@
       "hp": 838,
       "damage": 134,
       "img": "https://cdns3.royaleapi.com/cdn-cgi/image/w=150,h=180,format=auto/static/img/cards/v1-843264bf/witch.png",
-      "arena": 6
+      "arena": 7
     },
     {
       "id": 3,
@@ -38,7 +38,7 @@
       "hp": 1210,
       "damage": 193,
       "img": "https://cdns3.royaleapi.com/cdn-cgi/image/w=150,h=180,format=auto/static/img/cards/v1-843264bf/miner.png",
-      "arena": 11
+      "arena": 4
     },
     {
       "id": 4,
@@ -48,7 +48,7 @@
       "hp": 261,
       "damage": 169,
       "img": "https://cdns3.royaleapi.com/cdn-cgi/image/w=150,h=180,format=auto/static/img/cards/v1-843264bf/princess.png",
-      "arena": 11
+      "arena": 4
     },
     {
       "id": 5,
@@ -58,7 +58,7 @@
       "hp": 0,
       "damage": 689,
       "img": "https://cdns3.royaleapi.com/cdn-cgi/image/w=150,h=180,format=auto/static/img/cards/v1-843264bf/fireball.png",
-      "arena": 0
+      "arena": 1
     },
     {
       "id": 6,
@@ -68,7 +68,7 @@
       "hp": 720,
       "damage": 281,
       "img": "https://cdns3.royaleapi.com/cdn-cgi/image/w=150,h=180,format=auto/static/img/cards/v1-843264bf/wizard.png",
-      "arena": 4
+      "arena": 5
     },
     {
       "id": 7,
@@ -78,7 +78,7 @@
       "hp": 304,
       "damage": 107,
       "img": "https://cdns3.royaleapi.com/cdn-cgi/image/w=150,h=180,format=auto/static/img/cards/v1-843264bf/archers.png",
-      "arena": 0
+      "arena": 1
     },
     {
       "id": 8,
@@ -88,48 +88,48 @@
       "hp": 3760,
       "damage": 816,
       "img": "https://cdns3.royaleapi.com/cdn-cgi/image/w=150,h=180,format=auto/static/img/cards/v1-843264bf/pekka.png",
-      "arena": 6
+      "arena": 7
     }
   ],
   "arenas": [
     {
-      "id": 0,
+      "id": 1,
       "name": "Arena de Entrenamiento",
-      "trofeos": "0",
+      "trofeos": "-",
       "img": "http://vignette3.wikia.nocookie.net/clash-royale-esp/images/0/04/Arena_entrenamiento.png/revision/latest?cb=20160308023301&path-prefix=es"
     },
     {
-      "id": 1,
+      "id": 2,
       "name": "Estadio Duende",
       "trofeos": "0",
       "img": "http://vignette2.wikia.nocookie.net/clash-royale-esp/images/b/b3/Arena1.png/revision/latest?cb=20160308023307&path-prefix=es"
     },
     {
-      "id": 2,
+      "id": 3,
       "name": "Foso de Huesos",
       "trofeos": "300",
       "img": "http://vignette3.wikia.nocookie.net/clash-royale-esp/images/2/25/Arena2.png/revision/latest?cb=20160308023322&path-prefix=es"
     },
     {
-      "id": 3,
+      "id": 4,
       "name": "Coliseo Bárbaro",
       "trofeos": "600",
       "img": "http://vignette2.wikia.nocookie.net/clash-royale-esp/images/0/0e/Arena3.png/revision/latest?cb=20160308002449&path-prefix=es"
     },
     {
-      "id": 4,
+      "id": 5,
       "name": "Valle de Hechizos",
       "trofeos": "1000",
       "img": "http://vignette1.wikia.nocookie.net/clash-royale-esp/images/d/df/Arena5.png/revision/latest?cb=20160308023328&path-prefix=es"
     },
     {
-      "id": 5,
+      "id": 6,
       "name": "Taller del Constructor",
       "trofeos": "1300",
       "img": "http://vignette2.wikia.nocookie.net/clash-royale-esp/images/e/e2/Arena6.png/revision/latest?cb=20160308003559&path-prefix=es"
     },
     {
-      "id": 6,
+      "id": 7,
       "name": "Fuerte de la P.E.K.K.A.",
       "trofeos": "1600",
       "img": "http://vignette4.wikia.nocookie.net/clash-royale-esp/images/c/cd/Arena4.png/revision/latest?cb=20160308023324&path-prefix=es"
@@ -162,7 +162,7 @@
     },
     {
       "personaje_id": 7,
-      "arena_id": 0
+      "arena_id": 7
     },
     {
       "personaje_id": 8,

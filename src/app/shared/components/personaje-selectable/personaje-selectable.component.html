@@ -1,0 +1,24 @@
+<div id="popover-button">
+  <ion-item [button]="!disabled" [detail]="!disabled">
+    <ion-text slot="start" position="fixed">Arena</ion-text>
+    <ion-text *ngIf="!arenaSelected && !disabled">Seleccione una arena</ion-text>
+    <ion-avatar slot="start" *ngIf="arenaSelected" >
+      <ion-img *ngIf="arenaSelected.img" [src]="arenaSelected.img"></ion-img>
+      <img *ngIf="!arenaSelected?.img" alt="Silhouette of a person's head" src="https://ionicframework.com/docs/img/demos/avatar.svg" />
+    </ion-avatar> 
+    <ion-text *ngIf="arenaSelected">{{arenaSelected.name}}</ion-text>
+  </ion-item>
+</div>
+<ion-popover *ngIf="!disabled" trigger="popover-button" #popover (willPresent)="onLoadArena()">
+  <ng-template>
+    <ion-content>
+      <ion-list>
+        <app-personaje-item
+          (clicked)="onCardClicked(popover,$event)"
+          *ngFor="let arena of arenas"
+          [arena]="arena"
+        ></app-personaje-item>
+      </ion-list>
+    </ion-content>
+  </ng-template>
+</ion-popover>

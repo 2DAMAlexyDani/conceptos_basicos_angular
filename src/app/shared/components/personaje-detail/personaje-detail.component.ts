@@ -21,7 +21,7 @@ export class PersonajeDetailComponent implements OnInit {
       this.form.controls['hp'].setValue(_pers.hp);
       this.form.controls['damage'].setValue(_pers.damage);
       this.form.controls['arena'].setValue(_pers.arena);
-      this.form.controls['img'as string].setValue(_pers.img);
+      this.form.controls['img' as string].setValue(_pers.img);
     }
   }
   constructor(

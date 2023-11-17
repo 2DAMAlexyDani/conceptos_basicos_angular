@@ -6,6 +6,8 @@ import { IonicModule } from '@ionic/angular';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { ArenaDetailComponent } from './components/arena-detail/arena-detail.component';
 import { PersonajeDetailComponent } from './components/personaje-detail/personaje-detail.component';
+import { PersonajeSelectableComponent } from './components/personaje-selectable/personaje-selectable.component';
+import { PersonajeItemComponent } from './components/personaje-item/personaje-item.component';
 
 
 
@@ -14,6 +16,8 @@ import { PersonajeDetailComponent } from './components/personaje-detail/personaj
     //Components
     PersonajeInfoComponent,
     PersonajeDetailComponent,
+    PersonajeSelectableComponent,
+    PersonajeItemComponent,
     ArenaInfoComponent,
     ArenaDetailComponent
 
@@ -31,6 +35,8 @@ import { PersonajeDetailComponent } from './components/personaje-detail/personaj
     //Components
     PersonajeInfoComponent,
     PersonajeDetailComponent,
+    PersonajeSelectableComponent,
+    PersonajeItemComponent,
     ArenaInfoComponent,
     ArenaDetailComponent
   ]

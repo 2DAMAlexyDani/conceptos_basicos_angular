@@ -33,9 +33,9 @@
     <ion-item>
       <ion-input label="Damage" labelPlacement="start" formControlName="damage" type="number"></ion-input>
     </ion-item>
-    <ion-item>
-      <ion-input label="Arena" labelPlacement="start" formControlName="arena" type="number"></ion-input>
-    </ion-item>
+    <app-personaje-selectable
+      formControlName="arena"
+    ></app-personaje-selectable>
   </form>
 </ion-content>
 <ion-footer>

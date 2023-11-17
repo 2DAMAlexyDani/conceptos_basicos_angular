@@ -15,8 +15,13 @@ export class ArenasService implements ArenasServiceInterface{
 
   constructor(
     private http:HttpClient
-    ) { }
+  ) { }
   
+  public query(q:string):Observable<Arena[]>{
+    // Si coincide el tipo de datos que recibo con mi interfaz
+    return this.http.get<Arena[]>(environment.URL_BASE+'/arenas?q='+q);
+  }
+
   getAllArenas(): Observable<Arena[]> {
     return this.http.get<Arena[]>(environment.URL_BASE+'arenas').pipe(tap((arenas:Arena[])=>{
       this._arenas.next(arenas);
