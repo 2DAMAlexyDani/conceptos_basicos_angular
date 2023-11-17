@@ -6,7 +6,7 @@
       </ion-button>
     </ion-buttons>
     <ion-title>
-      {{(mode=='New'?'Personaje nuevo':'Editar personaje')}}
+      {{(mode=='New'?'Crear arena':'Editar arena')}}
     </ion-title>
     <ion-buttons slot="end">
       <ion-button *ngIf="mode=='Edit'" color="primary" fill="clear" (click)="onDelete()">
@@ -22,22 +22,10 @@
       <ion-input label="Nombre" labelPlacement="start" formControlName="name" type="text"></ion-input>
     </ion-item>
     <ion-item>
-      <ion-input label="Calidad" labelPlacement="start" formControlName="calidad" type="number"></ion-input>
+      <ion-input label="Trofeos" labelPlacement="start" formControlName="trofeos" type="text"></ion-input>
     </ion-item>
-    <ion-item>
-      <ion-input label="Elixir" labelPlacement="start" formControlName="elixir" type="number"></ion-input>
-    </ion-item>
-    <ion-item>
-      <ion-input label="Health" labelPlacement="start" formControlName="hp" type="number"></ion-input>
-    </ion-item>
-    <ion-item>
-      <ion-input label="Damage" labelPlacement="start" formControlName="damage" type="number"></ion-input>
-    </ion-item>
-    <app-personaje-selectable
-      formControlName="arena"
-    ></app-personaje-selectable>
   </form>
 </ion-content>
 <ion-footer>
-  <ion-button type="submit" [disabled]="!form.valid || !form.dirty" class="ion-padding" expand="full" (click)="onSubmit()">{{(mode=='New'?'Crear personaje':'Guardar personaje')}}</ion-button>
+  <ion-button type="submit" [disabled]="!form.valid || !form.dirty" class="ion-padding" expand="full" (click)="onSubmit()">{{(mode=='New'?'Crear':'Guardar arena')}}</ion-button>
 </ion-footer>

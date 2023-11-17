@@ -1,15 +1,15 @@
 import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
-import { Personaje } from '../../../core/Interfaces/personaje';
+import { Arena } from 'src/app/core/Interfaces/arenas';
 import { Router } from '@angular/router';
 
 @Component({
-  selector: 'app-personaje-info',
-  templateUrl: './personaje-info.component.html',
-  styleUrls: ['./personaje-info.component.scss'],
+  selector: 'app-arena-info',
+  templateUrl: './arena-info.component.html',
+  styleUrls: ['./arena-info.component.scss'],
 })
-export class PersonajeInfoComponent  implements OnInit {
-
-  @Input() person!:Personaje;
+export class ArenaInfoComponent  implements OnInit {
+  
+  @Input() arena!:Arena;
   @Output() onCardClicked:EventEmitter<void> = new EventEmitter<void>();
   
   constructor(

@@ -17,7 +17,7 @@ export class PersonajesService implements PersonajesServiceInterface {
 
   constructor(
     private http:HttpClient
-    ) {}
+  ) {}
 
   getAllPerson(): Observable<Personaje[]> {
     return this.http.get<Personaje[]>(environment.URL_BASE+'personajes').pipe(tap((personajes:Personaje[])=>{

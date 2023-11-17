@@ -1,7 +1,7 @@
 /**
  * Esto se utiliza para construir los autores en el about
  */
-export interface Autores{
+export interface Autor{
     //Atributos genéricos
     id:number;
     name:string;

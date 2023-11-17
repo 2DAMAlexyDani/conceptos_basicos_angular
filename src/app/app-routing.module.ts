@@ -18,7 +18,11 @@ const routes: Routes = [
   {
     path: 'about',
     loadChildren: () => import('./pages/about/about.module').then( m => m.AboutPageModule)
+  },  {
+    path: 'arenas',
+    loadChildren: () => import('./pages/arenas/arenas.module').then( m => m.ArenasPageModule)
   },
+
 
 
 ];
