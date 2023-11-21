@@ -1,3 +1,5 @@
+import { Personaje } from "./personaje";
+
 /**
  * Esto se utiliza para construir las arenas donde se desbloquean las cartas
  */
@@ -6,4 +8,5 @@ export interface Arena {
     name:string;
     trofeos:number;
     img?:string;
+    personajes:Personaje[]
 }

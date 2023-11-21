@@ -48,7 +48,8 @@ export class ArenasPage implements OnInit {
       component:ArenaDetailComponent,
       componentProps:{
         mode:data?'Edit':'New',
-        arena:data
+        arena:data,
+        personajes:data?.personajes
       },
     });
     modal.present();

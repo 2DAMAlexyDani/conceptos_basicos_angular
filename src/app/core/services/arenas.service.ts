@@ -1,9 +1,10 @@
 import { Injectable } from '@angular/core';
-import { BehaviorSubject, Observable, tap } from 'rxjs';
+import { BehaviorSubject, Observable, tap, zip } from 'rxjs';
 import { Arena } from '../Interfaces/arenas';
 import { ArenasServiceInterface } from '../Interfaces/arenas-service-interface';
 import { HttpClient } from '@angular/common/http';
 import { environment } from 'src/environments/environment';
+import { Personaje } from '../Interfaces/personaje';
 
 @Injectable({
   providedIn: 'root'
@@ -23,8 +24,17 @@ export class ArenasService implements ArenasServiceInterface{
   }
 
   getAllArenas(): Observable<Arena[]> {
-    return this.http.get<Arena[]>(environment.URL_BASE+'arenas').pipe(tap((arenas:Arena[])=>{
-      this._arenas.next(arenas);
+    return this.http.get<any[]>(environment.URL_BASE+'arenas').pipe(tap((arenas:Arena[])=>{
+        arenas.map(arena=>{
+          let requests:Observable<Personaje> = arena.personajes.map(p=>this.http.get<Personaje>(environment.URL_BASE+'personajes'));
+          zip(requests).subscribe(responses=>{
+            responses.forEach(p=>arena.personajes.add(p))
+            
+          })
+
+        this._arenas.next(arenas);
+      }
+      
     }))
   }
 

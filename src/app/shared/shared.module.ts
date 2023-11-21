@@ -6,7 +6,9 @@ import { IonicModule } from '@ionic/angular';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { ArenaDetailComponent } from './components/arena-detail/arena-detail.component';
 import { PersonajeDetailComponent } from './components/personaje-detail/personaje-detail.component';
+import { ArenaSelectableComponent } from './components/arena-selectable/arena-selectable.component';
 import { PersonajeSelectableComponent } from './components/personaje-selectable/personaje-selectable.component';
+import { ArenaItemComponent } from './components/arena-item/arena-item.component';
 import { PersonajeItemComponent } from './components/personaje-item/personaje-item.component';
 
 
@@ -19,8 +21,9 @@ import { PersonajeItemComponent } from './components/personaje-item/personaje-it
     PersonajeSelectableComponent,
     PersonajeItemComponent,
     ArenaInfoComponent,
-    ArenaDetailComponent
-
+    ArenaDetailComponent,
+    ArenaSelectableComponent,
+    ArenaItemComponent
     ],
   imports: [
     CommonModule,
@@ -38,7 +41,9 @@ import { PersonajeItemComponent } from './components/personaje-item/personaje-it
     PersonajeSelectableComponent,
     PersonajeItemComponent,
     ArenaInfoComponent,
-    ArenaDetailComponent
+    ArenaDetailComponent,
+    ArenaSelectableComponent,
+    ArenaItemComponent
   ]
 })
 export class SharedModule { }

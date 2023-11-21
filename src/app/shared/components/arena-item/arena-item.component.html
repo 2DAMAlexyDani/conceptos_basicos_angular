@@ -1,0 +1,7 @@
+<ion-item [button]="true" (click)="onCardClicked()">
+  <ion-avatar slot="start">
+    <img *ngIf="!personaje?.img" alt="Silhouette of a person's head" src="https://ionicframework.com/docs/img/demos/avatar.svg" />
+    <img *ngIf="personaje && personaje.img" alt="Silhouette of a person's head" [src]="personaje.img" />
+  </ion-avatar>
+  <ion-label>{{personaje?.name}}</ion-label>
+</ion-item>

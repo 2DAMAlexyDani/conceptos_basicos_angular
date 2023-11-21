@@ -96,7 +96,8 @@
       "id": 1,
       "name": "Arena de Entrenamiento",
       "trofeos": "-",
-      "img": "http://vignette3.wikia.nocookie.net/clash-royale-esp/images/0/04/Arena_entrenamiento.png/revision/latest?cb=20160308023301&path-prefix=es"
+      "img": "http://vignette3.wikia.nocookie.net/clash-royale-esp/images/0/04/Arena_entrenamiento.png/revision/latest?cb=20160308023301&path-prefix=es",
+      "personajes":[1,2,4]
     },
     {
       "id": 2,
@@ -108,13 +109,15 @@
       "id": 3,
       "name": "Foso de Huesos",
       "trofeos": "300",
-      "img": "http://vignette3.wikia.nocookie.net/clash-royale-esp/images/2/25/Arena2.png/revision/latest?cb=20160308023322&path-prefix=es"
+      "img": "http://vignette3.wikia.nocookie.net/clash-royale-esp/images/2/25/Arena2.png/revision/latest?cb=20160308023322&path-prefix=es",
+      "personaje": 4
     },
     {
       "id": 4,
       "name": "Coliseo Bárbaro",
       "trofeos": "600",
-      "img": "http://vignette2.wikia.nocookie.net/clash-royale-esp/images/0/0e/Arena3.png/revision/latest?cb=20160308002449&path-prefix=es"
+      "img": "http://vignette2.wikia.nocookie.net/clash-royale-esp/images/0/0e/Arena3.png/revision/latest?cb=20160308002449&path-prefix=es",
+      "personaje": 7
     },
     {
       "id": 5,
