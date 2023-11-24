@@ -6,4 +6,5 @@ export interface Arena {
     name:string;
     trofeos:number;
     img?:string;
+    personajes:any[];
 }
